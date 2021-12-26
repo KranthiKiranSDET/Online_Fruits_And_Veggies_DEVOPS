@@ -23,6 +23,7 @@ stage('Build') {
 				fileOperations([fileZipOperation(folderPath: '', outputFolderPath: 'C:/Users/Kranthi.Vadrevu/Desktop/Temporary/'), fileRenameOperation(destination: 'C:/Users/Kranthi.Vadrevu/Desktop/Temporary/Build.zip', source: 'C:/Users/Kranthi.Vadrevu/Desktop/Temporary/CI_CD_Pipeline.zip')]) 
         }
         catch (Exception e){
+		
         Build_pass = false
     }
                 

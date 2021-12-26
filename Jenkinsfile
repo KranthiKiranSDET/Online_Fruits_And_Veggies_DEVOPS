@@ -42,9 +42,9 @@ stage('Build') {
                  
                if(Build_pass){
                  
-              bat '''scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i "C:\Windows\System32\config\systemprofile\Kranthi.pem" C:/Users/Kranthi.Vadrevu/Desktop/Temporary/Build.zip ec2-user@ec2-52-207-212-39.compute-1.amazonaws.com:/home/ec2-user/EAPP
+              bat '''scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i "C:\Windows\System32\config\systemprofile\Kranthi.pem" C:/Users/Kranthi.Vadrevu/Desktop/Temporary/Build.zip ec2-user@ec2-54-174-45-141.compute-1.amazonaws.com:/home/ec2-user/EAPP
 
-ssh -o "StrictHostKeyChecking no" -i "C:\Windows\System32\config\systemprofile\Kranthi.pem" ec2-user@ec2-52-207-212-39.compute-1.amazonaws.com "cd EAPP; sh deployment.sh" 
+ssh -o "StrictHostKeyChecking no" -i "C:\Windows\System32\config\systemprofile\Kranthi.pem" ec2-user@ec2-54-174-45-141.compute-1.amazonaws.com "cd EAPP; sh deployment.sh" 
 '''
 
 }

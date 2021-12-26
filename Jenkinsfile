@@ -20,7 +20,7 @@ stage('Build') {
                   echo 'No Build.zip Found '
                 }
                 checkout([$class: 'GitSCM',  poll: true, branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/KranthiKiranSDET/Online_Fruits_And_Veggies_DEVOPS.git']]])
-				fileOperations([fileZipOperation(folderPath: '', outputFolderPath: 'C:/Users/Kranthi.Vadrevu/Desktop/Temporary/'), fileRenameOperation(destination: 'C:/Users/Kranthi.Vadrevu/Desktop/Temporary/Build.zip', source: 'C:/Users/Kranthi.Vadrevu/Desktop/Temporary/CI_CD_Pipeline.zip')]) 
+				fileOperations([fileZipOperation(folderPath: '', outputFolderPath: 'C:/Users/Kranthi.Vadrevu/Desktop/Temporary/'), fileRenameOperation(destination: 'C:/Users/Kranthi.Vadrevu/Desktop/Temporary/Build.zip', source: 'C:/Users/Kranthi.Vadrevu/Desktop/Temporary/CI_CD_Pipeline_main.zip')]) 
         }
         catch (Exception e){
         Build_pass = false

@@ -86,9 +86,9 @@ stage('Deploy_to_QA'){
                  
 				 try{
 				 
-              bat '''scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i "C:\Windows\System32\config\systemprofile\Kranthi.pem" C:/Users/Kranthi.Vadrevu/Desktop/Temporary/Build.zip ec2-user@ec2-3-87-69-35.compute-1.amazonaws.com:/home/ec2-user/EAPP
+              bat '''scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i "C:\Windows\System32\config\systemprofile\Kranthi.pem" C:/Users/Kranthi.Vadrevu/Desktop/Temporary/Build.zip ec2-user@ec2-34-201-129-59.compute-1.amazonaws.com:/home/ec2-user/EAPP
 
-ssh -o "StrictHostKeyChecking no" -i "C:\Windows\System32\config\systemprofile\Kranthi.pem" ec2-user@ec2-3-87-69-35.compute-1.amazonaws.com "cd EAPP; sh deployment.sh"
+ssh -o "StrictHostKeyChecking no" -i "C:\Windows\System32\config\systemprofile\Kranthi.pem" ec2-user@ec2-34-201-129-59.compute-1.amazonaws.com "cd EAPP; sh deployment.sh"
 '''
 
 }
@@ -133,9 +133,9 @@ steps {
                if(E2e_tests_pass){
 			   
                  
-              bat '''scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i "C:/Windows/System32/config/systemprofile/Kranthi.pem" C:/Users/Kranthi.Vadrevu/Desktop/Temporary/Build.zip ec2-user@ec2-3-86-30-247.compute-1.amazonaws.com:/home/ec2-user/EAPP
+              bat '''scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i "C:/Windows/System32/config/systemprofile/Kranthi.pem" C:/Users/Kranthi.Vadrevu/Desktop/Temporary/Build.zip ec2-user@ec2-44-201-200-247.compute-1.amazonaws.com:/home/ec2-user/EAPP
 
-ssh -o "StrictHostKeyChecking no" -i "C:/Windows/System32/config/systemprofile/Kranthi.pem" ec2-user@ec2-3-86-30-247.compute-1.amazonaws.com "cd EAPP; sh deployment.sh"
+ssh -o "StrictHostKeyChecking no" -i "C:/Windows/System32/config/systemprofile/Kranthi.pem" ec2-user@ec2-44-201-200-247.compute-1.amazonaws.com "cd EAPP; sh deployment.sh"
 '''
 
 }

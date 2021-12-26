@@ -17,7 +17,7 @@ stage('Build') {
                 cd Users/Kranthi.Vadrevu/Desktop/Temporary
                 del /f Build.zip'''
                 } else {
-                  echo 'No Build.zip Found'
+                  echo 'No Build.zip Found '
                 }
                 checkout([$class: 'GitSCM',  poll: true, branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/KranthiKiranSDET/Online_Fruits_And_Veggies_DEVOPS.git']]])
 				fileOperations([fileZipOperation(folderPath: '', outputFolderPath: 'C:/Users/Kranthi.Vadrevu/Desktop/Temporary/'), fileRenameOperation(destination: 'C:/Users/Kranthi.Vadrevu/Desktop/Temporary/Build.zip', source: 'C:/Users/Kranthi.Vadrevu/Desktop/Temporary/CI_CD_Pipeline.zip')]) 

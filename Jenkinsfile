@@ -100,7 +100,29 @@ Deploy_to_QA_pass=false
 
 
 }
+stage('Docker_Compose_Up'){
+   steps {
+                 script
+                 {
+                 
+               if(Deploy_to_QA_pass){
+                 
+				 try{
+				 
+              bat ''' cd C:/Users/Kranthi.Vadrevu/Desktop/Temporary/Docker-grid-Debug '''
+	      bat ''' docker-compose up -d '''
 
+}
+catch(Exception e){
+Deploy_to_QA_pass=false
+}
+
+}
+}
+}
+
+
+}
 stage('E2e_tests'){
  steps {
  script{
@@ -108,7 +130,7 @@ stage('E2e_tests'){
  if(Deploy_to_QA_pass){
  
  try{
- bat ''' "cd C:/Users/Kranthi.Vadrevu/Desktop/Temporary/Docker-grid-Debug docker-compose up -d" '''
+ 
  checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/KranthiKiranSDET/E2E_tests_Devops.git']]])
 bat 'mvn clean test -DsuiteXmlFile=testng.xml'
 

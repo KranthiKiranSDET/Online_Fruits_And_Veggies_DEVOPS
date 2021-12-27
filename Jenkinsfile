@@ -109,8 +109,8 @@ stage('Docker_Compose_Up'){
                  
 				 try{
 				 
-              bat ''' cd C:/Users/Kranthi.Vadrevu/Desktop/Temporary/Docker-grid-Debug '''
-	      bat ''' docker-compose up -d '''
+              bat ''' cd C:/Users/Kranthi.Vadrevu/Desktop/Temporary/Docker-grid-Debug
+	      docker-compose up -d '''
 
 }
 catch(Exception e){
